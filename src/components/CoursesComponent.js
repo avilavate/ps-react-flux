@@ -1,48 +1,22 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 import { getCourses } from "../api/courseApi";
 
-class CoursesPage extends React.Component {
-  constructor(props) {
-    super(props);
+function CoursesPage() {
+  const [courses, setCourses] = useState([]);
 
-    this.state = {
-      courses: []
-    };
-  }
-
-  componentDidMount() {
-    getCourses().then(courses => {
-      this.setState({ courses: courses });
+  useEffect(() => {
+    getCourses().then(_courses => {
+      setCourses(_courses);
     });
-  }
+  }, []);
 
-  render() {
-    return (
-      <>
-        <h1>Course</h1>
-        <div className="container">
-          <table className="table">
-            <thead className="table-dark">
-              <tr>
-                <th>Title</th>
-                <th>Author Id</th>
-                <th>Category</th>
-              </tr>
-            </thead>
-            {this.getCoursesGrid()}
-          </table>
-        </div>
-      </>
-    );
-  }
-
-  getCoursesGrid() {
+  function getCoursesGrid() {
     return (
       <tbody>
-        {this.state.courses.map(course => {
+        {courses.map(course => {
           return (
-            <tr>
+            <tr key={course.id}>
               <td>{course.title}</td>
               <td>{course.authorId}</td>
               <td>{course.category}</td>
@@ -52,6 +26,23 @@ class CoursesPage extends React.Component {
       </tbody>
     );
   }
+  return (
+    <>
+      <h1>Course</h1>
+      <div className="container">
+        <table className="table">
+          <thead className="table-dark">
+            <tr>
+              <th>Title</th>
+              <th>Author Id</th>
+              <th>Category</th>
+            </tr>
+          </thead>
+          {getCoursesGrid()}
+        </table>
+      </div>
+    </>
+  );
 }
 
 export default CoursesPage;
