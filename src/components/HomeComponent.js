@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function HomePage() {
   return (
@@ -7,7 +8,9 @@ function HomePage() {
       <p>React Flux & React Router for ultra fast Web Apps.</p>
 
       <p>
-        <a href="/about">About</a>
+        <Link className="btn btn-primary" to="/about">
+          About
+        </Link>
       </p>
     </div>
   );
