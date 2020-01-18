@@ -80,10 +80,10 @@
     },
     {
       "id": 12,
-      "title": " New Course",
+      "title": " New Course-1",
       "slug": "zzzzzzzzz",
       "authorId": 1,
-      "category": "ZZZZZZZZZZZZ",
+      "category": "New Course-1",
       "createdAt": 1579352928065
     }
   ],

@@ -6,7 +6,6 @@ class AboutPage extends React.Component {
     return (
       <>
         <div className="card">
-          <div className="card-header">About</div>
           <div className="card-body">
             <div className="container-fluid">
               <div className="text-center">

@@ -53,13 +53,15 @@ const ManageCoursePage = props => {
 
   return (
     <>
-      <h2>Manage Course</h2>
-      <CourseForm
-        error={error}
-        course={course}
-        onChange={handleCourseChange}
-        onSubmit={handleSave}
-      ></CourseForm>
+      <div class="container">
+        <h2>Manage Course</h2>
+        <CourseForm
+          error={error}
+          course={course}
+          onChange={handleCourseChange}
+          onSubmit={handleSave}
+        ></CourseForm>
+      </div>
     </>
   );
 };

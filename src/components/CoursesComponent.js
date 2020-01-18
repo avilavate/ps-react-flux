@@ -24,7 +24,7 @@ function CoursesPage() {
 
   return (
     <>
-      <h1>Course</h1>
+      <h1>Courses</h1>
       <CourseList courses={courses}></CourseList>
     </>
   );

@@ -1,5 +1,4 @@
 import React from "react";
-import PropType from "prop-types";
 import { Link } from "react-router-dom";
 
 function CourseList(props) {
@@ -22,9 +21,11 @@ function CourseList(props) {
   }
   return (
     <div className="container">
-      <Link className="btn btn-primary" to="/course">
-        Add Course
-      </Link>
+      <p>
+        <Link className="btn btn-primary" to="/course">
+          Add Course
+        </Link>
+      </p>
       <table className="table">
         <thead className="table-dark">
           <tr>
