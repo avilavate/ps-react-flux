@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 import CourseForm from "./CourseForm";
-import * as courseApi from "../api/courseApi";
+//import * as courseApi from "../api/courseApi";
 import { toast } from "react-toastify";
 import saveCourse from "../actions/courseActions";
+import courseStore from "../stores/courseStore";
 
 const ManageCoursePage = props => {
-  console.log("Manage Course Page: " + JSON.stringify(props));
   const [error, setError] = useState({});
   const [course, setCourse] = useState({
     id: null,
@@ -18,8 +18,8 @@ const ManageCoursePage = props => {
   useEffect(() => {
     const slug = props.match.params.slug;
     if (slug) {
-      console.log("empty Slug");
-      courseApi.getCourseBySlug(slug).then(_course => setCourse(_course));
+      let course = courseStore.getCoursebySlug(slug);
+      setCourse(course);
     }
   }, [props.match.params.slug]);
 

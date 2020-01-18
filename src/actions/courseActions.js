@@ -6,7 +6,7 @@ export default function saveCourse(course) {
   return courseApi.saveCourse(course).then(savedCourse => {
     dispatcher.dispatch({
       actionType: ActionTypes.CREATE_COURSE,
-      course: saveCourse
+      course: savedCourse
     });
   });
 }

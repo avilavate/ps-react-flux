@@ -1,32 +1,39 @@
 import { EventEmitter } from "events";
-import { dispatcher } from "../appDispatcher";
+import dispatcher from "../appDispatcher";
 import ActionTypes from "../actionTypes";
 
 const CHANGE_ENENT = "change";
 const _course = [];
+const eventEmitter = new EventEmitter();
 
-function CourseStore() {
-  const eventEmitter = new EventEmitter();
+function CourseStore() {}
 
-  function addChangeListner(callback) {
-    eventEmitter.addListener(CHANGE_ENENT, callback);
-  }
+CourseStore.addChangeListner = callback => {
+  eventEmitter.addListener(CHANGE_ENENT, callback);
+};
 
-  function addChangeListner(callback) {
-    eventEmitter.removeListener(CHANGE_ENENT, callback);
-  }
+CourseStore.removeChangeListner = function(callback) {
+  eventEmitter.removeListener(CHANGE_ENENT, callback);
+};
 
-  function emitChange() {
-    eventEmitter.on(CHANGE_ENENT);
-  }
+CourseStore.emitChange = function() {
+  eventEmitter.emit(CHANGE_ENENT);
+};
 
-  function getCourse() {
-    return _course;
-  }
-}
+CourseStore.getCourse = function() {
+  return _course;
+};
+
+CourseStore.getCoursebySlug = function(slug) {
+  console.log(`_Course ${_course}`);
+  return _course.find(_c => _c.slug === slug);
+};
+
+export default CourseStore;
 
 dispatcher.register(action => {
-  switch (ActionTypes) {
+  debugger;
+  switch (action.actionType) {
     case ActionTypes.CREATE_COURSE:
       _course.push(action.course);
       CourseStore.emitChange();
@@ -36,5 +43,3 @@ dispatcher.register(action => {
       break;
   }
 });
-
-export default CourseStore;
