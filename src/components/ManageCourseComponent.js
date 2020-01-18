@@ -44,10 +44,7 @@ const ManageCoursePage = props => {
   const handleSave = e => {
     e.preventDefault();
     if (!formIsValid()) return;
-    // courseApi.saveCourse(course).then(() => {
-    //   toast.success("Course added successfuly");
-    //   props.history.push("/courses");
-    // });
+    console.log(course);
     saveCourse(course).then(() => {
       toast.success("Action Executed: Course Added");
       props.history.push("/courses");

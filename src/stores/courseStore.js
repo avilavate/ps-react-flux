@@ -1,6 +1,7 @@
 import { EventEmitter } from "events";
 import dispatcher from "../appDispatcher";
 import ActionTypes from "../actionTypes";
+import { loadCourses } from "../actions/courseActions";
 
 const CHANGE_ENENT = "change";
 let _course = [];
@@ -34,6 +35,8 @@ export default store;
 dispatcher.register(action => {
   switch (action.actionType) {
     case ActionTypes.CREATE_COURSE:
+      debugger;
+      _course = _course.filter(_c => _c.id !== action.course.id);
       _course.push(action.course);
       store.emitChange();
       break;

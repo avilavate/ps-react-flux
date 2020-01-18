@@ -77,6 +77,14 @@
       "authorId": 1,
       "category": " Testing Add Course-Update1",
       "createdAt": 1579351957923
+    },
+    {
+      "id": 12,
+      "title": " New Course",
+      "slug": "zzzzzzzzz",
+      "authorId": 1,
+      "category": "ZZZZZZZZZZZZ",
+      "createdAt": 1579352928065
     }
   ],
   "authors": [
