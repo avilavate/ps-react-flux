@@ -18,8 +18,8 @@ function App() {
         <Route path="/" exact component={HomePage}></Route>
         <Route path="/about" exact component={AboutPage}></Route>
         <Route path="/courses" component={CoursesPage}></Route>
-        <Route path="/course/" component={ManageCoursePage}></Route>
-        <Route path="/course/:slug" component={ManageCoursePage}></Route>
+        <Route path="/course/" exact component={ManageCoursePage}></Route>
+        <Route path="/course/:slug" exact component={ManageCoursePage}></Route>
         <Redirect from="/about-page" to="/about"></Redirect>
         <Route component={NotFoundPage}></Route>
       </Switch>
