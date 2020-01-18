@@ -22,6 +22,9 @@ function CourseList(props) {
   }
   return (
     <div className="container">
+      <Link className="btn btn-primary" to="/course">
+        Add Course
+      </Link>
       <table className="table">
         <thead className="table-dark">
           <tr>

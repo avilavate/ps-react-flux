@@ -72,107 +72,11 @@
     },
     {
       "id": 11,
-      "title": "default title",
-      "slug": "default-title",
+      "title": " Added From Action",
+      "slug": "added-from-action",
       "authorId": 1,
-      "category": "df",
-      "createdAt": 1579239997179
-    },
-    {
-      "id": 12,
-      "title": "Node.JS Fundamentals",
-      "slug": "node-js-fundamentals",
-      "authorId": 2,
-      "category": "Node JS",
-      "createdAt": 1579240044562
-    },
-    {
-      "id": 13,
-      "title": "ReactJS Fundamentals",
-      "slug": "reactjs-fundamentals",
-      "authorId": 2,
-      "category": "JavaSctipt",
-      "createdAt": 1579240378087
-    },
-    {
-      "id": 14,
-      "title": "default title",
-      "slug": "default-title",
-      "authorId": 2,
-      "category": "test",
-      "createdAt": 1579240434161
-    },
-    {
-      "id": 15,
-      "title": "default title",
-      "slug": "default-title",
-      "authorId": 1,
-      "category": "Test toaster",
-      "createdAt": 1579240978088
-    },
-    {
-      "id": 16,
-      "title": "Azure Fundamentals",
-      "slug": "azure-fundamentals",
-      "authorId": 2,
-      "category": "Cloud Computing",
-      "createdAt": 1579241510062
-    },
-    {
-      "id": 17,
-      "title": " ",
-      "slug": "",
-      "authorId": 1,
-      "category": "dsfdsf",
-      "createdAt": 1579245332925
-    },
-    {
-      "id": 18,
-      "title": "New Title",
-      "slug": "new-title",
-      "authorId": 1,
-      "category": "Node",
-      "createdAt": 1579246088180
-    },
-    {
-      "id": 19,
-      "title": "Hi",
-      "slug": "hi",
-      "authorId": 1,
-      "category": "Node",
-      "createdAt": 1579246185222
-    },
-    {
-      "id": 20,
-      "title": "Testing Validation- Done1",
-      "slug": "testing-validation",
-      "authorId": 1,
-      "category": "Testing Validation",
-      "createdAt": 1579251205892
-    },
-    {
-      "id": 21,
-      "title": " fdgfd",
-      "slug": "fdgfd",
-      "authorId": 2,
-      "category": "fdf",
-      "createdAt": 1579251465609
-    },
-    {
-      "id": 22,
-      "title": " dsf",
-      "slug": "dsf",
-      "authorId": 1,
-      "category": "dsf",
-      "createdAt": 1579251529033
-    },
-    {
-      "id": 23,
-      "title": " hkf",
-      "slug": "hkf",
-      "authorId": 1,
-      "category": "dsjfhd",
-      "createdAt": 1579251576746
+      "category": "Action Flux",
+      "createdAt": 1579331248436
     }
   ],
   "authors": [
